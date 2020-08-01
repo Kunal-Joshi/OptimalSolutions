@@ -1,0 +1,12 @@
+# Find a number repeating odd times
+# In a list of number apperaring even times find a single number which repeats od time
+# [2, 2, 3, 5, 6, 6, 3]
+# 5 is the number appearing odd times
+
+
+lst = [int(x) for x in raw_input().split(" ")]
+odd = 0
+for num in lst:
+    odd = odd ^ num
+print(odd, "is the number appearing odd times")
+    
