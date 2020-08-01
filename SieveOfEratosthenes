@@ -1,0 +1,25 @@
+# Sieve of Eratosthenes
+# Optimal Way to generate prime numbers upto n
+
+
+n = int(input())
+dic = {}
+for i in range(2,n):
+    dic[i] = False
+
+for key in dic.keys():
+    if dic[key] == False:
+        p = key
+        for key in dic.keys():
+            if dic[i] == False:
+                if key >= p**2:
+                    if key%p == 0:
+                        dic[key] = True
+                        
+for key in dic.keys():
+    if not(dic[key]):
+        print(key),
+
+    
+
+        
