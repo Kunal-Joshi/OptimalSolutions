@@ -1,0 +1,23 @@
+# Check Kth bit is set or not
+# i.e 5 in binart is 101'
+# please note how we see bit number it starts from 0 from right to left
+# 1  0  1
+# 2  1  0    <- Bit number
+# if i want to check what is second bit?
+# This program will take bit number and tell it is set or not
+
+
+n = int(input())
+bit = int(input())
+
+if n & (1 << bit):
+    print("Bit is set")
+else:
+    print("Bit is not set")
+
+
+# Use this to see what's happening in binary
+# print(bin(n))
+# print(bin(1 << bit))
+# print(bin( n & (1 << bit)))
+
