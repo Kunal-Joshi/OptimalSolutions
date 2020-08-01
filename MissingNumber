@@ -1,0 +1,17 @@
+# Find Missing Number
+# 1 3 4 5
+# Ans 2 is the missing number
+
+lst = [int(x) for x in raw_input().split(' ')]
+
+start = 1
+series_exor = 1
+total_exor = 0
+
+for num in lst:
+    total_exor = total_exor ^ num
+    start = start + 1
+    series_exor = series_exor ^ start
+
+
+print("Missing number is", series_exor ^ total_exor)
