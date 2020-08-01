@@ -1,0 +1,32 @@
+# LCM AND HCF
+# HCF is also called GCD Greated Common Divisor
+
+# Given a and b
+# a * b = LCM * HCF
+# So from above if we have two numbers and GCD we can compute LCM also
+
+# Lets see how to compute GCD
+
+
+# Basic Euclidean Algorithm for HCF
+def gcd(a,b):
+    if a == 0:
+        return b
+    return gcd(b%a,a)
+
+a = int(input())
+b = int(input())
+HCF = gcd(a,b)
+LCM = (a*b) / HCF
+
+print("HCF :-",HCF)
+print("LCM :-",LCM)
+
+#Time Complexity: O(log(min(a, b)))
+#Important properties of LCM and HCF:
+#For two numbers say, 'a' and 'b', LCM x HCF = a x b.
+#HCF of co-primes = 1.
+#For two fractions,
+#HCF = HCF (Numerators) / LCM (Denominators)
+#LCM = LCM (Numerators) / HCF (Denominators)
+
