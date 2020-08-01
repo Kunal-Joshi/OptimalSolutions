@@ -1,0 +1,19 @@
+#  Example n = 15
+#  Binary of 15 :- 1 1 1 1
+#  This program will print 4 as there are 4 1's or 4 bits set
+
+
+table = []
+
+def initialize():
+    table.append(0)
+    for i in range(1,256):
+        table.append((i & 1) + table[i // 2])
+	
+def countSetBits(n):
+    return table[n & 0xff] + table[(n >> 8) & 0xff] + table[(n >> 16) & 0xff] + table[n >> 24]; 
+ 
+
+initialize()
+n = int(input()) 
+print(countSetBits(n))
